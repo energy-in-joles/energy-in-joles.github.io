@@ -1,0 +1,136 @@
+---
+layout: post
+title: Stack The Flags '22
+subtitle: My Web Solutions for the Challenge
+thumbnail-img: /assets/img/stf-22/thumb.png
+share-img: /assets/img/stf-22/thumb.png
+tags: [ctf, cybersecurity]
+---
+
+
+# Contents
+- [Overview](#Overview)
+- [PyRunner](#PyRunner)
+- [Blog Post 1](#Blog-Post-1)
+- [Blog Post 2](#Blog-Post-2)
+- [Hyper Proto Secure Note 1](#Hyper-Proto-Secure-Note-1)
+
+
+# Overview
+
+Stack the Flags 2022 was a 48-hour Capture-The-Flag (CTF) challenge from 2nd to 4th December 2022. After a hiatus from CTFs, it was difficult getting back into it. Nonetheless, 4 challenges completed, and a 23rd placing ain't too bad!
+
+![Team Placing](/assets/img/stf-22/team-placing.jpg){: .mx-auto.d-block :}
+
+
+# PyRunner
+
+### Description: Can you help us test our internal Python job runner prototype?
+
+#### The Website ####
+
+PyRunner is a web application that enables the user to input arguments into a templated uvicorn web server script. 
+
+Filling in the argument boxes, it seems that the **title** field is appended to the output field when **Run Template** is clicked. Perhaps this can allow us to leak some kind of information?
+
+![PyRunner Website](/assets/img/stf-22/pyrunner-website.jpg){: .mx-auto.d-block :}
+
+Looking at the script in the template box, we can see that this output behaviour is caused by a **print** function.
+
+```python
+print("Webserver: <title>")
+```
+
+This is interesting, as it seems that the user inputted title replaces a placeholder tag "<\title>" in the string. This seems like a fairly insecure way of adding user inputted string. Let's see how this replacement is done back end.
+
+#### Snooping into the Source Folder ####
+
+We are given the source folder for the problem. Let's take a look at that. We first note that there is a **fakeflag** file in the src folder. This is likely the same location as the real flag we need to leak from the machine. The file of interest here is **app.py**.
+
+![app script 1](/assets/img/stf-22/app-script-1)
+
+I am immediately drawn to the list called **disallowed** in line 13. Seems like a poorly cobbled up list of big "no-no" words to sanitise out of something. We also take a mental note from line 21 that the user inputs seem to be compiled into a list with the key value ***arguments***. Let's move on.
+
+![app script 1a](/assets/img/stf-22/app-script-1a)
+
+Looking at line 24, we see a **textfilter** function that applies the **disallowed** list of naughty words. The filter runs through the list using a for loop and replaces the "no-no" words as it goes along. Seems...sketchy.
+
+Let's try to piece everything together and figure out how the **textfilter** comes into play, and what happens backend when we press the **Run Template** button on the site.
+
+Bingo! We find the **Run Template** function in line 59:
+
+![app script 2](/assets/img/stf-22/app-script-2)
+
+In line 66 to 67, we see that the list of user arguments are looped through the textfilter, before replacing the **<{argument}>** tags that we saw earlier (ie <\title>).
+
+#### Devicing a Solution ####
+
+At the end of my recce, I note two key vulnerabilities:
+
+1. Insecure Appendage of User Input to String
+2. Weak Data Sanitisation of User Input
+
+Our mode of attack seems clear, we will inject malicious input into the **title** field on the website to allow us to run OS code to read the flag in the machine.
+
+Let's see how we can exploit 1 and 2 respectively:
+
+##### Insecure Appendage of User Input to String #####
+
+Since the app script does an in-place string replacement with the user input, we can simply close the string early with double quotes in our user input. 
+
+Since we want to exploit the print function to leak the flag, we can then open an f-string to print the result of our OS function. Something like this:
+
+~~~
+"+f"{run my no-no code}
+~~~
+
+This way, when inject the code into the field, the code will read as:
+
+```python
+print("Webserver: "+f"{run my no-no code}")
+```
+
+#### Weak Data Sanitisation of User Input ####
+
+In order to run an OS code, we need to **import** **OS**. Then, we can run a linux terminal code to fish out the flag. In one line, this can be written as:
+
+~~~
+__import__('os').system('cd && cat flag')
+~~~
+
+Of course, we used two big bad words here: **import** and **os**. Recalling that the **textfilter** uses a for loop an in-place replacement, we can mask words by sandwiching them between words checked later. 
+
+Let's try "imp;ort". When **"import"** is being checked, it will not raise any alarm. Then, when ";" is checked, the system will remove the semicolon, leaving behind the word **"import"** unscathed. Nice!
+
+However, we have a problem. **os** is the last word in the list, so we can't do the same thing for it. Well, no one said anything about **os** in capital letters. We can run it with capital letters then use the ```.lower()``` function to remove shrink it back to its original case.
+
+Putting everything together, our payload looks like this:
+
+~~~
+"+f"{__imp;ort__('OS'.lower()).system('cd && cat flag')}
+~~~
+
+and when injected into the print function:
+
+```python
+print("Webserver: "+f"{__imp;ort__('OS'.lower()).system('cd && cat flag')}")
+```
+
+Let's give it a shot!
+
+### Running the Payload ####
+
+And it works!
+
+![PyRunner Flag](/assets/img/stf-22/pyrunner-flag)
+
+Note that the flag I extracted here was not the competition file, as I am hosting the site for this writeup locally.
+
+
+# Blog Post 1
+
+### Description: Jaga created an internal social media platform for the company, can you leak anyone's information?
+
+# Blog Post 2
+
+# Hyper Proto Secure Note 1

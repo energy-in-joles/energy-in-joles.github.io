@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-![Me](/assets/img/aboutme/me.jpg){: max-width=60% .mx-auto.d-block}
+![Me](/assets/img/aboutme/me.jpg =400x600)
 
 Hi! I'm Joel from Singapore. I'm currently an incoming freshman at Imperial College London studying Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
 
@@ -11,7 +11,7 @@ Hi! I'm Joel from Singapore. I'm currently an incoming freshman at Imperial Coll
 
 Ever since I picked up Python in my own time back in 2017, I have continued to explore the many fields of computing through competitions, courses and personal projects. This website is dedicated to chronicling my endeavours!
 
-*My Experience:*
+**My Experience:**
 1. Data Science and Artificial Intelligence
     - Language: Python (keras, scikit-learn, pandas, numpy)
     - What I've Done: 

@@ -13,7 +13,7 @@
 title: energy_in_joles
 
 # Your name to show in the footer
-author: Joel
+author: Joel Ng
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -21,13 +21,13 @@ author: Joel
 
 navbar-links:
   About Me: "aboutme"
+  Posts: "index"
+  CTFs: "ctf"
+  Hackathons: "hackathon"
+  Projects: "project"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
-  Posts:
-    - CTFs (Cybersecurity Competitions): "ctf"
-    - Hackathons: "hackathon"
-    - Projects: "project"
 
 ################
 # --- Logo --- #

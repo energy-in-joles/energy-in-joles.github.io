@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-![Me](/assets/img/aboutme/me.jpg)
+![Me](/assets/img/aboutme/me.jpg){: width="250"}
 
 Hi! I'm Joel from Singapore. I'm currently an incoming freshman at Imperial College London studying Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
 

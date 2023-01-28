@@ -22,7 +22,7 @@ author: Joel Ng
 navbar-links:
   About Me: "aboutme"
   Posts: "index"
-  CTFs: "ctf"
+  CTFs: "capture-the-flag"
   Hackathons: "hackathon"
   Projects: "project"
   #Resources:

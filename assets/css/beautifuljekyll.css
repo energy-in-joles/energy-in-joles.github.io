@@ -583,7 +583,7 @@ footer .footer-custom-content {
 .blog-cat a {
   color: {{ site.text-col | default: "#404040" }};
   text-decoration: none;
-  padding: 0 0.3125rem;
+  padding: 0 0;
   opacity: 0.8;
   border: 1px solid transparent;
   border-radius: 0.1875rem;

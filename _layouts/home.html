@@ -78,6 +78,13 @@ layout: page
       </div>
       {% endunless %}
 
+      {% if post.category != nil %}
+      <div class="blog-tags">
+        <span>Category:</span>
+        <a class="d-inline" href="/{{- post.category -}}">{{- post.category -}}</a>
+      </div>
+      {% endif %}
+
       {% if site.feed_show_tags != false and post.tags.size > 0 %}
       <div class="blog-tags">
         <span>Tags:</span>

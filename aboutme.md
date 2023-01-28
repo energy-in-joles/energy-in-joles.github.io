@@ -22,7 +22,7 @@ Ever since I picked up Python in my own time back in 2017, I have continued to e
     - Software: Solidworks, Fusion 360, Ultimaker Cura, Blender
     - What I've Done: 
         - Designed, prototyped and machined small parts for robotic solutions as part of my internship with [Hope Technik](https://www.hopetechnik.com/).
-        - Experience in 3D Printing, Waterjet Cutting and CNC Press Brake Machining.
+        - Experience in FDM 3D Printing, Waterjet Cutting and CNC Press Brake Machining.
 3. Cybersecurity
     - Software: Wireshark, Burpsuite, Hydra, Nmap, Metasploit
     - What I've Done:

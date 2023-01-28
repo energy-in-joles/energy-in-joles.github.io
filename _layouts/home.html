@@ -79,8 +79,7 @@ layout: page
       {% endunless %}
 
       {% if post.category != nil %}
-      <div class="blog-tags">
-        <span>Category:</span>
+      <div class="post-meta">
         <a class="d-inline" href="/{{- post.category -}}">{{- post.category -}}</a>
       </div>
       {% endif %}

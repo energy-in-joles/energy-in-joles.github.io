@@ -526,10 +526,10 @@ footer .footer-custom-content {
   margin-top: -2.1875rem;
 }
 @media (max-width: 767px) {
-  .post-preview .post-image {
+  /*.post-preview .post-image {
     height: 9rem;
     width: 9rem;
-  }
+  }*/
   .post-preview .post-image-short {
     margin-top: 0;
   }

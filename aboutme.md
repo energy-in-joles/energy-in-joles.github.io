@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-<img src="/assets/img/aboutme/me.jpg" alt="Me" width="200"/>
+![Me](/assets/img/aboutme/me.jpg){: .mx-auto.d-block :}
 
 Hi! I'm Joel from Singapore. I'm currently an incoming freshman at Imperial College London studying Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
 
@@ -22,8 +22,8 @@ Ever since I picked up Python in my own time back in 2017, I have continued to e
     - Software: Solidworks, Fusion 360, Ultimaker Cura, Blender
     - What I've Done: 
         - Designed, prototyped and machined small parts for robotic solutions as part of my internship with [Hope Technik](https://www.hopetechnik.com/).
-        - Experience in FDM 3D Printing, Waterjet Cutting and CNC Press Brake Machining.
-        - Designed and built a 3-axis CNC machine from scratch at home. CAD/CAM simple pieces for use with the mill.
+        - Experience in FDM 3D Printing, Waterjet Cutting, NC Press Brake Machining and 3-axis CNC machining.
+        - Designed and built a 3-axis CNC machine from scratch at home. Used CAD/CAM to design simple pieces to cut with the mill.
 3. Cybersecurity
     - Software: Wireshark, Burpsuite, Hydra, Nmap, Metasploit
     - What I've Done:

@@ -51,7 +51,7 @@ layout: page
         Posted on {{ post.date | date: date_format }}
         {% if post.category != nil %}
         <span>•</span>
-        <a href="/{{- post.category -}}">{{- post.category - | capitalize }}</a>
+        <a href="/{{- post.category -}}">{{- post.category | capitalize -}}</a>
         {% endif %} 
       </p>
 

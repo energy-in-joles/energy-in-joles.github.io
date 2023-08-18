@@ -22,9 +22,10 @@ author: Joel Ng
 navbar-links:
   About Me: "aboutme"
   Posts: "index"
-  CTFs: "capture-the-flag"
-  Hackathons: "hackathon"
-  Projects: "project"
+  Categories:
+  - CTFs: "capture-the-flag"
+  - Hackathons: "hackathon"
+  - Projects: "project"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"

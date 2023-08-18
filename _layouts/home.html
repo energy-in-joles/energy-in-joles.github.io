@@ -75,7 +75,7 @@ layout: page
       <div class="post-entry">
         {% assign excerpt = post.excerpt %}
         {% if post.content contains "<!-- begin_excerpt -->" %}
-        {% assign excerpt = post.content | split: "<!-- end_excerpt -->" | first | split: "<!-- begin_excerpt -->" | last %}
+          {% assign excerpt = post.content | split: "<!-- end_excerpt -->" | first | split: "<!-- begin_excerpt -->" | last %}
         {% endif %}
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ excerpt | strip_html | truncatewords: excerpt_length }}

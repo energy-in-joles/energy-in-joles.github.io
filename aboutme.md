@@ -5,11 +5,11 @@ title: About me
 
 ![Me](/assets/img/aboutme/me.jpg){: .mx-auto.d-block :}
 
-Hi! I'm Joel from Singapore. I'm currently an incoming freshman at Imperial College London studying Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
+Hi! I'm Joel from Singapore. I'm currently a 1st year undergrdaduate at Imperial College London reading Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
 
 ### My Journey in Engineering ###
 
-Ever since I picked up Python in my own time back in 2017, I have continued to explore computing through competitions, courses and personal projects. Beyond software, I also love to design and build, with a strong foundation in 3D printing. This website is dedicated to chronicling my endeavours!
+I have a deep interest in designing and building both software, hardware and integrated projects. I see robotics as a marriage of disciplines in hardware and software, and strive to hone my skills in both areas. This website is dedicated to chronicling my endeavours!
 
 **My Experience:**
 1. Data Science and Artificial Intelligence

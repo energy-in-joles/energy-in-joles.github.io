@@ -5,7 +5,7 @@ title: About me
 
 ![Me](/assets/img/aboutme/me.jpg){: .mx-auto.d-block :}
 
-Hi! I'm Joel from Singapore. I'm currently a 1st year undergrdaduate at Imperial College London reading Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
+Hi! I'm Joel from Singapore. I'm currently a 1st year undergraduate at Imperial College London reading Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
 
 ### My Journey in Engineering ###
 
@@ -28,7 +28,3 @@ I have a deep interest in designing and building both software, hardware and int
     - Software: Wireshark, Burpsuite, Hydra, Nmap, Metasploit
     - What I've Done:
         - Active in the CTF scene for over 3 years, with a consistent top 30% ranking (Stack the Flags, Cyberthon, WhiteHacks)
-4. 2D Game Development
-    - Software: Unity and C#
-    - What I've Done:
-        - Working on a Singaporean 2D RPG game. Still in progress!

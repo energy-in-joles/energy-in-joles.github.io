@@ -5,16 +5,13 @@ title: About me
 
 ![Me](/assets/img/aboutme/me.jpg){: .mx-auto.d-block :}
 
-Hi! I'm Joel from Singapore. I'm currently a 1st year undergraduate at Imperial College London reading Electrical and Electronic Engineering. Deeply fascinated by the impact of robotics and artificial intelligence, I hope to build a career in the field, striving to find my place in the intersection of mechanical, electrical and software engineering.
-
-### My Journey in Engineering ###
-
-I have a deep interest in designing and building both software, hardware and integrated projects. I see robotics as a marriage of disciplines in hardware and software, and strive to hone my skills in both areas. This website is dedicated to chronicling my endeavours!
+Hi! I'm Joel from Singapore. I'm currently a 2nd year undergraduate at Imperial College London reading Electronic and Information Engineering. Deeply fascinated by data, robotics and artificial intelligence, I hope to build a career in the field.
 
 **My Experience:**
 1. Data Science and Artificial Intelligence
     - Language: Python (keras, scikit-learn, pandas, numpy)
     - What I've Done: 
+        - Built and trained a physical Furuta Pendulum robot from scratch that can swing up and balances an inverted pendulum. Built using an Arduino Nano interfaced with a Soft-Actor Critic (SAC) Reinforcement Learning model with Stable-Baselines3.
         - Completed [_Deep Learning A-Z<sup>TM</sup>: Hands On Artificial Neural Networks_](https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/) and [_Machine Learning, Data Science and Deep Learning with Python_](https://www.udemy.com/course/deeplearning/) courses on Udemy.
         - Competed in numerous [Analytics Vidhya](https://www.analyticsvidhya.com/) competitions, building Random Forest Classifier and ANN models.
         - Co-wrote a paper on the potential application of Convolutional Neural Networks and Graph Theory to reduce habitat fragmentation. Shortlisted at the Singapore leg of the Microsoft Imagine Cup (Junior) 2020.

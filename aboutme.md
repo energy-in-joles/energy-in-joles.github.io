@@ -9,7 +9,7 @@ Hi! I'm Joel from Singapore. I'm currently a 2nd year undergraduate at Imperial 
 
 **My Experience:**
 1. Data Science and Artificial Intelligence
-    - Language: Python (keras, scikit-learn, pandas, numpy)
+    - Language: Python (Stable-Baselines3, pytorch, keras, scikit-learn, pandas, numpy)
     - What I've Done: 
         - Built and trained a physical Furuta Pendulum robot from scratch that can swing up and balances an inverted pendulum. Built using an Arduino Nano interfaced with a Soft-Actor Critic (SAC) Reinforcement Learning model with Stable-Baselines3.
         - Completed [_Deep Learning A-Z<sup>TM</sup>: Hands On Artificial Neural Networks_](https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/) and [_Machine Learning, Data Science and Deep Learning with Python_](https://www.udemy.com/course/deeplearning/) courses on Udemy.
